@@ -80,33 +80,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Category row */}
-      <motion.div
-        className="border-t border-border px-8 md:px-12 py-6"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.7 }}
-      >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {[
-            { label: "Machine Learning", dot: true },
-            { label: "Healthcare" },
-            { label: "Legal Tech" },
-            { label: "Autonomous Systems" },
-          ].map((item) => (
-            <span
-              key={item.label}
-              className="text-2xl md:text-3xl lg:text-4xl tracking-[-0.02em] text-fg flex items-center gap-2"
-              style={{ fontFamily: "var(--font-instrument), serif" }}
-            >
-              {item.dot && (
-                <span className="w-3 h-3 rounded-full bg-accent inline-block shrink-0" />
-              )}
-              {item.label}
-            </span>
-          ))}
-        </div>
-      </motion.div>
     </section>
   );
 }
