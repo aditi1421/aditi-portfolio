@@ -6,7 +6,7 @@ const ROLES = [
   {
     title: "Software Engineer",
     company: "Nyayanidhi",
-    period: "Dec 2024 – Mar 2025",
+    period: "Dec 2025 – Apr 2026",
     description:
       "Built multi-agent AI drafting pipelines and a document intelligence system for large-scale legal PDFs with confidence-scored categorization. Created a multilingual English/Kannada translation portal used by advocates and court staff.",
   },

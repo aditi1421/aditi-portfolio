@@ -31,9 +31,14 @@ export default function Projects() {
           </div>
         </motion.div>
 
-        <div>
+        <div className="group/list">
           {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
+            <div
+              key={project.id}
+              className="transition-opacity duration-200 lg:group-hover/list:opacity-50 lg:hover:!opacity-100"
+            >
+              <ProjectCard project={project} />
+            </div>
           ))}
           <div className="border-t border-border" />
         </div>
