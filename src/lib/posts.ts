@@ -7,12 +7,20 @@ import remarkHtml from "remark-html";
 
 const POSTS_DIR = path.join(process.cwd(), "content", "blog");
 
+export type StripImage = {
+  src: string;
+  width: number;
+  height: number;
+  alt: string;
+};
+
 export type PostMeta = {
   slug: string;
   title: string;
   date: string;
   summary: string;
   readingTime: number;
+  strip: StripImage[];
 };
 
 export type Post = PostMeta & {
@@ -29,6 +37,25 @@ function formatDate(raw: unknown) {
   const value = raw instanceof Date ? raw : new Date(String(raw));
   if (Number.isNaN(value.getTime())) return String(raw);
   return value.toISOString().slice(0, 10);
+}
+
+function parseStrip(raw: unknown): StripImage[] {
+  if (!Array.isArray(raw)) return [];
+
+  return raw.flatMap((item) => {
+    if (!item || typeof item !== "object") return [];
+    const { src, width, height, alt } = item as Record<string, unknown>;
+    if (typeof src !== "string" || !Number(width) || !Number(height)) return [];
+
+    return [
+      {
+        src,
+        width: Number(width),
+        height: Number(height),
+        alt: typeof alt === "string" ? alt : "",
+      },
+    ];
+  });
 }
 
 function postFiles() {
@@ -53,6 +80,7 @@ function parse(file: string) {
       date: formatDate(data.date),
       summary: String(data.summary ?? ""),
       readingTime: readingTimeFor(content),
+      strip: parseStrip(data.strip),
     } satisfies PostMeta,
   };
 }

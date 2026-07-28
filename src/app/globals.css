@@ -49,6 +49,67 @@ body {
   color: #fff;
 }
 
+/* Film strip: photos drifting past between two black rails. */
+
+.film-strip {
+  --frame-height: 200px;
+  background: #111;
+  padding: 10px 0;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .film-strip {
+    --frame-height: 300px;
+  }
+}
+
+.film-strip__track {
+  display: flex;
+  width: max-content;
+  animation: film-strip-drift 90s linear infinite;
+}
+
+.film-strip:hover .film-strip__track,
+.film-strip:focus-within .film-strip__track {
+  animation-play-state: paused;
+}
+
+/* Spacing lives on the frame, not as a flex gap, so that translating the
+   track by exactly 50% lands one full copy further along. */
+.film-strip__frame {
+  height: var(--frame-height);
+  flex: none;
+  margin-right: 3px;
+}
+
+.film-strip__img {
+  height: 100%;
+  width: auto;
+  display: block;
+  filter: grayscale(1) contrast(1.05);
+  transition: filter 0.45s ease;
+}
+
+.film-strip:hover .film-strip__img {
+  filter: grayscale(0);
+}
+
+@keyframes film-strip-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .film-strip {
+    overflow-x: auto;
+  }
+
+  .film-strip__track {
+    animation: none;
+  }
+}
+
 .prose-bw {
   font-family: var(--font-instrument), Georgia, serif;
   font-size: 20px;
