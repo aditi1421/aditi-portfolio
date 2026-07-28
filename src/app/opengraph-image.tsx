@@ -78,7 +78,7 @@ export default async function Image() {
           src={`data:image/jpeg;base64,${portrait.toString("base64")}`}
           width={420}
           height={602}
-          style={{ objectFit: "cover", filter: "grayscale(1)" }}
+          style={{ objectFit: "cover" }}
         />
       </div>
     ),

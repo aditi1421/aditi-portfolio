@@ -73,11 +73,9 @@ export default async function Image({
                 src={frame.uri}
                 width={frame.width}
                 height={STRIP_HEIGHT}
-                style={{
-                  marginRight: FRAME_GAP,
-                  objectFit: "cover",
-                  filter: "grayscale(1)",
-                }}
+                // Full colour here, unlike the page. The card competes in a
+                // feed, where the photos are the whole hook.
+                style={{ marginRight: FRAME_GAP, objectFit: "cover" }}
               />
             ))}
           </div>
