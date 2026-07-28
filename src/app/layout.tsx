@@ -13,10 +13,22 @@ const instrumentSerif = Instrument_Serif({
   weight: "400",
 });
 
+const SITE_URL = "https://aditikumar.vercel.app";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Aditi Kumar",
   description:
     "AI/ML Engineer. Healthcare, Legal Tech, Autonomous Systems.",
+  openGraph: {
+    siteName: "Aditi Kumar",
+    locale: "en_US",
+    type: "website",
+    url: SITE_URL,
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
