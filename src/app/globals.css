@@ -42,6 +42,116 @@ body {
   color: #111;
 }
 
+/* ---- Blog: a plain black-and-white reading view ---- */
+
+.blog-view ::selection {
+  background: #111;
+  color: #fff;
+}
+
+.prose-bw {
+  font-family: var(--font-instrument), Georgia, serif;
+  font-size: 20px;
+  line-height: 1.75;
+  color: #111;
+}
+
+.prose-bw > * + * {
+  margin-top: 1.5em;
+}
+
+.prose-bw h2,
+.prose-bw h3,
+.prose-bw h4 {
+  font-family: var(--font-instrument), Georgia, serif;
+  line-height: 1.25;
+  margin-top: 2.2em;
+  margin-bottom: -0.6em;
+}
+
+.prose-bw h2 { font-size: 30px; }
+.prose-bw h3 { font-size: 24px; }
+.prose-bw h4 { font-size: 20px; }
+
+.prose-bw a {
+  color: #111;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.prose-bw a:hover {
+  opacity: 0.6;
+}
+
+.prose-bw strong {
+  font-weight: 600;
+}
+
+.prose-bw ul,
+.prose-bw ol {
+  padding-left: 1.4em;
+}
+
+.prose-bw ul { list-style: disc; }
+.prose-bw ol { list-style: decimal; }
+
+.prose-bw li + li {
+  margin-top: 0.5em;
+}
+
+.prose-bw blockquote {
+  border-left: 2px solid #111;
+  padding-left: 1.1em;
+  color: #444;
+}
+
+.prose-bw hr {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin: 3em 0;
+}
+
+.prose-bw code {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.8em;
+  background: #f4f4f4;
+  padding: 0.15em 0.4em;
+}
+
+.prose-bw pre {
+  background: #111;
+  color: #fff;
+  padding: 1.2em;
+  overflow-x: auto;
+}
+
+.prose-bw pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.prose-bw img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose-bw table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 13px;
+}
+
+.prose-bw th,
+.prose-bw td {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding: 0.6em 0.8em;
+  text-align: left;
+}
+
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: #fff; }
 ::-webkit-scrollbar-thumb { background: #ddd; }
