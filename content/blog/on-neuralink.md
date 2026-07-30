@@ -71,6 +71,8 @@ To achieve these goals, The N1 implant can listen to and stimulate neurons, supp
 
 Neuralink's N1 implant
 
+![Neuralink's N1 implant](/blog/neuralink/n1-implant.png)
+
 ## Breakdown of the N1 implant:
 
 - BCI Interface is fully implantable, cosmetically invisible and designed to let you control a computer or mobile device anywhere you go
