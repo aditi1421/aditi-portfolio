@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import SocialLinks from "@/components/SocialLinks";
 
 export default function Contact() {
   return (
@@ -27,30 +28,7 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="flex gap-5">
-          <a
-            href="mailto:aditi12kumar@gmail.com"
-            className="font-mono text-[12px] text-fg underline underline-offset-2 hover:text-accent-hover transition-colors"
-          >
-            Email &#x2197;
-          </a>
-          <a
-            href="https://github.com/aditi1421"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-mono text-[12px] text-fg underline underline-offset-2 hover:text-accent-hover transition-colors"
-          >
-            GitHub &#x2197;
-          </a>
-          <a
-            href="https://www.linkedin.com/in/aditi-kumar-/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-mono text-[12px] text-fg underline underline-offset-2 hover:text-accent-hover transition-colors"
-          >
-            LinkedIn &#x2197;
-          </a>
-        </div>
+        <SocialLinks />
       </motion.div>
 
       <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-border flex justify-between">

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import SiteNav from "@/components/SiteNav";
+import SocialLinks from "@/components/SocialLinks";
 
 export default function Hero() {
   return (
@@ -51,6 +52,8 @@ export default function Hero() {
           >
             See projects &rarr;
           </a>
+
+          <SocialLinks className="mt-7" />
         </motion.div>
 
         {/* Right — photo, pinned to right edge */}
