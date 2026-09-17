@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
+import SiteNav from "@/components/SiteNav";
 
 export default function Hero() {
   return (
@@ -10,33 +10,11 @@ export default function Hero() {
       {/* Top nav row */}
       <div className="px-8 md:px-12 pt-8 md:pt-10">
         <motion.div
-          className="flex flex-wrap items-center gap-x-5 sm:gap-x-6 gap-y-1"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="font-mono text-[16px] md:text-[18px] tracking-[0.1em] text-fg uppercase font-medium">
-            Aditi Kumar
-          </span>
-          <Link
-            href="/"
-            aria-current="page"
-            className="font-mono text-[16px] md:text-[18px] text-fg hover:text-fg/60 transition-colors underline underline-offset-4"
-          >
-            About
-          </Link>
-          <Link
-            href="/blog"
-            className="font-mono text-[16px] md:text-[18px] text-fg hover:text-fg/60 transition-colors"
-          >
-            Blog
-          </Link>
-          <a
-            href="#contact"
-            className="font-mono text-[16px] md:text-[18px] text-fg hover:text-fg/60 transition-colors"
-          >
-            Contact
-          </a>
+          <SiteNav active="about" contactHref="#contact" />
         </motion.div>
       </div>
 
