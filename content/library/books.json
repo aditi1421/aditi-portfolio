@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "mother-mary-comes-to-me",
+    "title": "Mother Mary Comes to Me",
+    "author": "Arundhati Roy",
+    "year": 2025,
+    "pages": 224,
+    "cover": "/library/covers/mother-mary-comes-to-me.jpg",
+    "color": "#97231C",
+    "note": ""
+  },
+  {
+    "slug": "tiny-experiments",
+    "title": "Tiny Experiments",
+    "author": "Anne-Laure Le Cunff",
+    "year": 2025,
+    "pages": 304,
+    "cover": "/library/covers/tiny-experiments.jpg",
+    "color": "#2E8C8C",
+    "note": ""
+  },
+  {
+    "slug": "when-breath-becomes-air",
+    "title": "When Breath Becomes Air",
+    "author": "Paul Kalanithi",
+    "year": 2016,
+    "pages": 232,
+    "cover": "/library/covers/when-breath-becomes-air.jpg",
+    "color": "#6E7A52",
+    "note": ""
+  },
+  {
+    "slug": "tuesdays-with-morrie",
+    "title": "Tuesdays with Morrie",
+    "author": "Mitch Albom",
+    "year": 1997,
+    "pages": 199,
+    "cover": "/library/covers/tuesdays-with-morrie.jpg",
+    "color": "#8A6F3D",
+    "note": ""
+  },
+  {
+    "slug": "a-suitable-boy",
+    "title": "A Suitable Boy",
+    "author": "Vikram Seth",
+    "year": 1993,
+    "pages": 1408,
+    "cover": "/library/covers/a-suitable-boy.jpg",
+    "color": "#C2490B",
+    "note": ""
+  },
+  {
+    "slug": "superintelligence",
+    "title": "Superintelligence",
+    "author": "Nick Bostrom",
+    "year": 2014,
+    "pages": 352,
+    "cover": "/library/covers/superintelligence.jpg",
+    "color": "#656571",
+    "note": ""
+  },
+  {
+    "slug": "co-intelligence",
+    "title": "Co-Intelligence",
+    "author": "Ethan Mollick",
+    "year": 2024,
+    "pages": 250,
+    "cover": "/library/covers/co-intelligence.jpg",
+    "color": "#4A6B34",
+    "note": ""
+  }
+]
