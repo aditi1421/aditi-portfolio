@@ -87,6 +87,7 @@ export default function Hero() {
               src="/aditi.jpg"
               alt="Aditi Kumar"
               fill
+              sizes="(min-width: 768px) 288px, 240px"
               className="object-cover object-top"
               priority
             />
