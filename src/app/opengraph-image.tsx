@@ -58,7 +58,7 @@ export default async function Image() {
               marginTop: 28,
             }}
           >
-            AI and machine learning applied to domains that matter.
+            Neuroscience, HCI, and AI for rehabilitation.
           </div>
           <div
             style={{
