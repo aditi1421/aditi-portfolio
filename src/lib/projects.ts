@@ -14,8 +14,25 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "llm-wiki",
+    id: "stroke-lesion-location",
     index: "01",
+    title: "Stroke Lesion Location and Outcome",
+    tagline: "Does where a stroke hits the brain predict disability at discharge?",
+    description:
+      "A study of whether stroke lesion location predicts disability at hospital discharge beyond age, NIHSS severity and lesion volume. Uses 620 patients from the open Stroke Outcome Optimization Project dataset, registers each lesion mask to standard brain atlases, and compares clinical only models against models that add lesion location features.",
+    highlights: [
+      "Adding corticospinal tract damage to clinical factors lifts AUROC from 0.80 to 0.83 in nested cross validation",
+      "Location alone (0.78) does not beat age and severity, so location adds signal on top of clinical factors, not instead of them",
+      "Lesion masks registered to Harvard Oxford and JHU white matter atlases, with registration run on Modal",
+      "Interactive app that explains the findings in plain language for a non specialist reader",
+    ],
+    techTags: ["Python", "Neuroimaging", "Nilearn", "Machine Learning", "Stroke"],
+    github: "https://github.com/aditi1421/Stroke-lesion-location",
+    metric: { label: "AUROC gain", value: "+0.032" },
+  },
+  {
+    id: "llm-wiki",
+    index: "02",
     title: "LLM Wiki — AI Safety",
     tagline: "Living research wiki built by an LLM, on AI safety",
     description:
@@ -31,7 +48,7 @@ export const projects: Project[] = [
   },
   {
     id: "ai-safety",
-    index: "02",
+    index: "03",
     title: "AI Moral Resilience Tester",
     tagline: "Stress-testing AI alignment under adversarial pressure",
     description:
@@ -48,7 +65,7 @@ export const projects: Project[] = [
   },
   {
     id: "turboquant",
-    index: "03",
+    index: "04",
     title: "TurboQuant for Notion Search",
     tagline: "Replacing RaBitQ with TurboQuant for vector search at scale",
     description:
@@ -62,22 +79,6 @@ export const projects: Project[] = [
     techTags: ["Python", "Vector Search", "Quantization", "Information Retrieval"],
     github: "https://github.com/aditi1421/Notion_TurboQuant",
     metric: { label: "Recall@1", value: "93.8%" },
-  },
-  {
-    id: "cross-exam",
-    index: "04",
-    title: "CrossExam Simulator",
-    tagline: "AI-powered cross-examination prep for trial lawyers",
-    description:
-      "A cross-examination preparation platform where lawyers can practice against an AI witness. Simulates realistic courtroom dynamics, adapts witness responses based on questioning strategy, and provides feedback on examination technique.",
-    highlights: [
-      "Realistic AI witness with adaptive response strategies",
-      "Feedback on questioning technique and examination flow",
-      "Built for trial lawyers preparing for depositions and cross",
-      "Full courtroom simulation with objection handling",
-    ],
-    techTags: ["TypeScript", "Next.js", "Legal Tech", "AI"],
-    github: "https://github.com/aditi1421/cross-examination",
   },
   {
     id: "clinical-ml",
@@ -111,53 +112,5 @@ export const projects: Project[] = [
     ],
     techTags: ["Python", "Voice AI", "STT Evaluation", "Multilingual NLP"],
     github: "https://github.com/aditi1421/hinglish-voice-eval",
-  },
-  {
-    id: "legal-auto-research",
-    index: "07",
-    title: "Legal Auto Research",
-    tagline: "AI-powered legal research automation",
-    description:
-      "Intelligent system that automates legal research workflows — ingesting case documents, extracting key arguments, and surfacing relevant precedents. Built from real-world experience at a legal tech startup serving lawyers across India.",
-    highlights: [
-      "End-to-end pipeline: document ingestion → research output",
-      "NLP-driven extraction of arguments and citations",
-      "Designed for Indian legal system workflows",
-      "Production experience from Bangalore legal tech startup",
-    ],
-    techTags: ["Python", "NLP", "Legal Tech", "RAG"],
-    github: "https://github.com/aditi1421/legal-auto-research",
-  },
-  {
-    id: "transformer",
-    index: "08",
-    title: "Transformer from Scratch",
-    tagline: "\"Attention Is All You Need\" — first principles",
-    description:
-      "Clean implementation of the original Transformer architecture from the 2017 paper. Every component — multi-head attention, positional encoding, encoder-decoder stacks — built from scratch for deep architectural understanding.",
-    highlights: [
-      "Complete encoder-decoder with multi-head self-attention",
-      "Scaled dot-product attention + positional encoding",
-      "Layer normalization and residual connections",
-      "Heavily commented for educational clarity",
-    ],
-    techTags: ["Python", "PyTorch", "Deep Learning", "NLP"],
-    github: "https://github.com/aditi1421/Transformer",
-  },
-  {
-    id: "game-of-life",
-    index: "09",
-    title: "Game of Life CLI",
-    tagline: "Conway's cellular automaton in your terminal",
-    description:
-      "Terminal-based Game of Life with smooth rendering and configurable patterns. Complex emergent behavior from simple rules — rendered at 60fps in your shell.",
-    highlights: [
-      "Real-time terminal rendering with smooth animation",
-      "Configurable grid dimensions and seed patterns",
-      "Emergent complexity from three simple rules",
-      "Zero-dependency Python CLI",
-    ],
-    techTags: ["Python", "CLI", "Simulation", "Algorithms"],
-    github: "https://github.com/aditi1421/game-of-life-cli",
   },
 ];
