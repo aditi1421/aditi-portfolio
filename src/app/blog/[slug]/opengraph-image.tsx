@@ -110,7 +110,7 @@ export default async function Image({
               marginTop: 22,
             }}
           >
-            {`ADITI KUMAR  ·  ${post ? `${post.readingTime} MIN READ` : "BLOG"}`}
+            {"ADITI KUMAR  ·  BLOG"}
           </div>
         </div>
       </div>

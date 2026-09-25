@@ -19,18 +19,12 @@ export type PostMeta = {
   title: string;
   date: string;
   summary: string;
-  readingTime: number;
   strip: StripImage[];
 };
 
 export type Post = PostMeta & {
   html: string;
 };
-
-function readingTimeFor(markdown: string) {
-  const words = markdown.trim().split(/\s+/).filter(Boolean).length;
-  return Math.max(1, Math.round(words / 220));
-}
 
 function formatDate(raw: unknown) {
   if (!raw) return "";
@@ -79,7 +73,6 @@ function parse(file: string) {
       title: String(data.title ?? slug),
       date: formatDate(data.date),
       summary: String(data.summary ?? ""),
-      readingTime: readingTimeFor(content),
       strip: parseStrip(data.strip),
     } satisfies PostMeta,
   };
