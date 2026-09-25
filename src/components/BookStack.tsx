@@ -99,7 +99,6 @@ export default function BookStack({ books }: { books: Book[] }) {
         <div className="lg:mt-6">
           <h3
             className="text-[22px] md:text-[26px] leading-[1.2]"
-            style={{ fontFamily: "var(--font-instrument), serif" }}
           >
             {selected.title}
           </h3>

@@ -6,19 +6,15 @@ export default function BlogIndex() {
   const posts = getAllPosts();
 
   return (
-    <main className="mx-auto w-full max-w-3xl px-6 md:px-8 py-10 md:py-14">
+    <main className="mx-auto w-full max-w-6xl px-6 md:px-12 py-10 md:py-14">
       <BlogNav />
 
       <header className="mt-16 md:mt-24 pb-8 border-b border-black/15">
         <h1
-          className="text-[40px] md:text-[56px] leading-[1.1]"
-          style={{ fontFamily: "var(--font-instrument), serif" }}
+          className="text-[32px] md:text-[40px] font-semibold tracking-tight leading-[1.1]"
         >
           Blog
         </h1>
-        <p className="font-mono text-[12px] uppercase tracking-[0.12em] text-black/50 mt-4">
-          {posts.length} {posts.length === 1 ? "post" : "posts"}
-        </p>
       </header>
 
       {posts.length === 0 ? (
@@ -39,19 +35,15 @@ export default function BlogIndex() {
                   </span>
                   <div className="mt-2 md:mt-0">
                     <h2
-                      className="text-[24px] md:text-[28px] leading-[1.25] underline decoration-transparent group-hover:decoration-black underline-offset-[6px] transition-colors"
-                      style={{ fontFamily: "var(--font-instrument), serif" }}
+                      className="text-[18px] md:text-[20px] font-medium leading-[1.3] underline decoration-transparent group-hover:decoration-black underline-offset-[6px] transition-colors"
                     >
                       {post.title}
                     </h2>
                     {post.summary ? (
-                      <p className="font-mono text-[12.5px] leading-[1.8] text-black/60 mt-2 max-w-xl">
+                      <p className="font-mono text-[12.5px] leading-[1.8] text-black/60 mt-2 max-w-3xl">
                         {post.summary}
                       </p>
                     ) : null}
-                    <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-black/40 mt-3">
-                      {post.readingTime} min read
-                    </p>
                   </div>
                 </div>
               </Link>

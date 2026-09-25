@@ -46,30 +46,29 @@ export default async function BlogPost({ params }: Props) {
 
   return (
     <>
-      <div className="mx-auto w-full max-w-2xl px-6 md:px-8 pt-10 md:pt-14 pb-8 md:pb-12">
+      <div className="mx-auto w-full max-w-6xl px-6 md:px-12 pt-10 md:pt-14 pb-8 md:pb-12">
         <BlogNav />
       </div>
 
       {hasStrip ? <FilmStrip images={post.strip} /> : null}
 
-      <main className="mx-auto w-full max-w-2xl px-6 md:px-8 pb-10 md:pb-14">
+      <main className="mx-auto w-full max-w-6xl px-6 md:px-12 pb-10 md:pb-14">
         <article className={hasStrip ? "mt-12 md:mt-16" : "mt-4 md:mt-10"}>
           <header className="pb-8 border-b border-black/15">
             <h1
-              className="text-[34px] md:text-[46px] leading-[1.15]"
-              style={{ fontFamily: "var(--font-instrument), serif" }}
+              className="text-[28px] md:text-[36px] font-semibold tracking-tight leading-[1.2]"
             >
               {post.title}
             </h1>
-            <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-black/45 mt-5">
-              {post.date}
-              {post.date ? " · " : ""}
-              {post.readingTime} min read
-            </p>
+            {post.date ? (
+              <p className="font-mono text-[11px] uppercase tracking-[0.12em] text-black/45 mt-5">
+                {post.date}
+              </p>
+            ) : null}
           </header>
 
           <div
-            className="prose-bw mt-10"
+            className="prose-bw mt-10 max-w-3xl"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </article>

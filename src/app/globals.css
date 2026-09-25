@@ -3,9 +3,6 @@
 :root {
   --bg: #ffffff;
   --fg: #111111;
-  --accent: #FFD600;
-  --accent-hover: #FFC400;
-  --accent-soft: #FFF3B0;
   --muted: #777;
   --border: #e0e0e0;
   --surface: #ffffff;
@@ -15,16 +12,13 @@
 @theme inline {
   --color-bg: var(--bg);
   --color-fg: var(--fg);
-  --color-accent: var(--accent);
-  --color-accent-hover: var(--accent-hover);
-  --color-accent-soft: var(--accent-soft);
   --color-muted: var(--muted);
   --color-border: var(--border);
   --color-surface: var(--surface);
   --color-surface-hover: var(--surface-hover);
-  --font-sans: var(--font-instrument);
-  --font-mono: var(--font-geist-mono);
-  --font-display: var(--font-instrument);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-inter);
+  --font-display: var(--font-inter);
 }
 
 html {
@@ -34,12 +28,12 @@ html {
 body {
   background: var(--bg);
   color: var(--fg);
-  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
 
 ::selection {
-  background: #FFD600;
-  color: #111;
+  background: #111;
+  color: #fff;
 }
 
 /* ---- Blog: a plain black-and-white reading view ---- */
@@ -110,10 +104,14 @@ body {
   }
 }
 
+/* The one splash of colour on an otherwise black and white page. */
+.reading-line {
+  color: #c0392b;
+}
+
 .prose-bw {
-  font-family: var(--font-instrument), Georgia, serif;
-  font-size: 20px;
-  line-height: 1.75;
+  font-size: 15px;
+  line-height: 1.7;
   color: #111;
 }
 
@@ -124,15 +122,15 @@ body {
 .prose-bw h2,
 .prose-bw h3,
 .prose-bw h4 {
-  font-family: var(--font-instrument), Georgia, serif;
+  font-weight: 600;
   line-height: 1.25;
   margin-top: 2.2em;
   margin-bottom: -0.6em;
 }
 
-.prose-bw h2 { font-size: 30px; }
-.prose-bw h3 { font-size: 24px; }
-.prose-bw h4 { font-size: 20px; }
+.prose-bw h2 { font-size: 24px; }
+.prose-bw h3 { font-size: 20px; }
+.prose-bw h4 { font-size: 15px; }
 
 .prose-bw a {
   color: #111;
@@ -173,7 +171,7 @@ body {
 }
 
 .prose-bw code {
-  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
   font-size: 0.8em;
   background: #f4f4f4;
   padding: 0.15em 0.4em;
@@ -202,7 +200,6 @@ body {
 .prose-bw table {
   width: 100%;
   border-collapse: collapse;
-  font-family: var(--font-geist-mono), ui-monospace, monospace;
   font-size: 13px;
 }
 
@@ -290,7 +287,6 @@ body {
 
 .book-slab__title,
 .book-slab__author {
-  font-family: var(--font-geist-mono), ui-monospace, monospace;
   font-size: 10.5px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
