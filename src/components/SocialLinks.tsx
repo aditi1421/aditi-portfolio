@@ -16,7 +16,7 @@ export default function SocialLinks({ className = "" }: { className?: string }) 
             : {})}
           className="font-mono text-[12px] underline underline-offset-2 hover:opacity-60 transition-opacity"
         >
-          {social.label} &#x2197;
+          {social.label}
         </a>
       ))}
     </div>
