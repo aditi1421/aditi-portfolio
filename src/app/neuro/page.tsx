@@ -21,6 +21,10 @@ export default function NeuroPage() {
           >
             Neuro
           </h1>
+          <p className="font-mono text-[13px] leading-[1.9] text-black/70 mt-5 max-w-3xl">
+            I&apos;m interested in how the brain learns and reorganizes after neurological
+            injury, and how neuroscience, machine learning, and HCI can improve rehabilitation.
+          </p>
         </header>
 
         <ul>
