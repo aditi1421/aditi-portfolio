@@ -9,6 +9,7 @@ export interface Project {
   github: string;
   liveUrl?: string;
   image?: string;
+  video?: { src: string; poster: string };
   metric?: { label: string; value: string };
 }
 

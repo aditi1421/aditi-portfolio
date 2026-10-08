@@ -3,7 +3,11 @@ import { projects, type Project } from "@/lib/projects";
 const strokeLesion = projects.find((p) => p.id === "stroke-lesion-location")!;
 
 export const neuroProjects: Project[] = [
-  { ...strokeLesion, index: "01" },
+  {
+    ...strokeLesion,
+    index: "01",
+    video: { src: "/neuro/stroke-lesion-location.mp4", poster: "/neuro/stroke-lesion-location.jpg" },
+  },
   {
     id: "bci-stress-lab",
     index: "02",
@@ -19,6 +23,7 @@ export const neuroProjects: Project[] = [
     ],
     techTags: ["Python", "EEG", "BCI", "MNE", "Robustness"],
     github: "https://github.com/aditi1421/BCI-Stress-Lab",
+    video: { src: "/neuro/bci-stress-lab.mp4", poster: "/neuro/bci-stress-lab.jpg" },
     metric: { label: "CSP + LDA balanced accuracy", value: "60.71%" },
   },
   {
@@ -36,5 +41,6 @@ export const neuroProjects: Project[] = [
     ],
     techTags: ["Python", "Nengo", "Spiking Neural Networks", "Computational Neuroscience"],
     github: "https://github.com/aditi1421/Neural-Forager",
+    video: { src: "/neuro/neural-forager.mp4", poster: "/neuro/neural-forager.jpg" },
   },
 ];
