@@ -72,9 +72,7 @@ export default function Home() {
               running routes :)
             </p>
             <p className="reading-line">
-              Currently reading two books parallely:{" "}
-              <em>A Sixth of Humanity</em> and{" "}
-              <em>The World According to Physics</em>.
+              Currently reading <em>Elon Musk</em> by Walter Isaacson.
             </p>
           </section>
 
