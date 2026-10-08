@@ -70,10 +70,6 @@ export default function BookStack({ books }: { books: Book[] }) {
             );
           })}
         </div>
-
-        <p className="font-mono text-[11px] text-black/40 mt-5">
-          Pick a book to open it. Thickness is its real page count.
-        </p>
       </div>
 
       {/* The book you pulled out */}
