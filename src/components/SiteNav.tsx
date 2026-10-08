@@ -1,11 +1,12 @@
 import Link from "next/link";
 
-export type NavSection = "about" | "projects" | "blog" | "library";
+export type NavSection = "about" | "projects" | "blog" | "notes" | "library";
 
 const LINKS: { key: NavSection; label: string; href: string }[] = [
   { key: "about", label: "About", href: "/" },
   { key: "projects", label: "Projects", href: "/projects" },
   { key: "blog", label: "Blog", href: "/blog" },
+  { key: "notes", label: "Notes", href: "/notes" },
   { key: "library", label: "Library", href: "/library" },
 ];
 
