@@ -68,5 +68,15 @@
     "cover": "/library/covers/co-intelligence.jpg",
     "color": "#4A6B34",
     "note": ""
+  },
+  {
+    "slug": "source-code",
+    "title": "Source Code",
+    "author": "Bill Gates",
+    "year": 2025,
+    "pages": 336,
+    "cover": "/library/covers/source-code.jpg",
+    "color": "#975E3F",
+    "note": ""
   }
 ]
