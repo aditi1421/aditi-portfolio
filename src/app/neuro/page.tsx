@@ -23,7 +23,8 @@ export default function NeuroPage() {
           </h1>
           <p className="font-mono text-[13px] leading-[1.9] text-black/70 mt-5 max-w-3xl">
             I&apos;m interested in how the brain learns and reorganizes after neurological
-            injury, and how neuroscience, machine learning, and HCI can improve rehabilitation.
+            injury, and how neuroscience, machine learning, and HCI can improve rehabilitation. That is what draws me to AI
+            safety as well, and I spend some of my time reading about economics and intelligence.
           </p>
         </header>
 
